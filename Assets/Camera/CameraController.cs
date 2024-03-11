@@ -35,6 +35,9 @@ public class CameraController : MonoBehaviour
         UpdateZoom();
     }
 
+    /// <summary>
+    /// Updates all the orbits sizes depending on the zoom level
+    /// </summary>
     private void UpdateZoom()
     {
         //Updates zoom distance
@@ -47,6 +50,9 @@ public class CameraController : MonoBehaviour
         virtualCam.m_Orbits[1].m_Radius = Mathf.Sqrt(Mathf.Pow(zoomDistance, 2) - Mathf.Pow(zoomDistance / 2, 2));
     }
 
+    /// <summary>
+    /// Updates the rotation of the camera relative to where it's facing.
+    /// </summary>
     private void UpdateRotation()
     {
         Vector3 vCamPosition = virtualCam.transform.position;
@@ -57,6 +63,7 @@ public class CameraController : MonoBehaviour
         directionVector.Normalize();
         angle = Vector3.SignedAngle(Vector3.forward, directionVector, Vector3.up);
     }
+    
     private void Update()
     { 
         UpdateRotation();

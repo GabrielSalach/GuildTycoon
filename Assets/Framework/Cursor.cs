@@ -15,9 +15,11 @@ public class Cursor : MonoBehaviour
     public void OnCursorMove(InputAction.CallbackContext context)
     {
         cursorPos = context.ReadValue<Vector2>();
-        
     }
 
+    /// <summary>
+    /// Handles the cursor click on interactables
+    /// </summary>
     public void OnClick(InputAction.CallbackContext context)
     {
         if (!context.performed) return;

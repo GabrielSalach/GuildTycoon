@@ -7,12 +7,17 @@ using UnityEngine.Events;
 [RequireComponent(typeof(Outline))]
 public class Interactable : MonoBehaviour
 {
+
+    // Currently focused interactable
     private static Interactable focusedInteractable;
+    // Outline component 
     private Outline outline;
+    // Mouse click events to hook up to 
     [HideInInspector] public UnityEvent onClick, onDoubleClick, onHold, onFocus, onUnfocus;
     
 
     public void Awake() {
+        // Initializes the outline 
         outline = GetComponent<Outline>();
         outline.OutlineColor = Color.yellow;
         outline.OutlineWidth = 6;
@@ -25,7 +30,7 @@ public class Interactable : MonoBehaviour
         onUnfocus.AddListener(Unfocus);
     }
 
-    // Input Event Callbacks
+    // Input Event Callbacks, called by the Cursor class
     public void OnClick() {
         onClick.Invoke();
     }
@@ -64,7 +69,7 @@ public class Interactable : MonoBehaviour
         focusedInteractable = null;
     }
 
-    public static GameObject getFocusedInteractable()
+    public static GameObject GetFocusedInteractable()
     {
         return focusedInteractable.gameObject;
     }

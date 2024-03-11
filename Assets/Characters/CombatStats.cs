@@ -6,6 +6,10 @@ using UnityEngine;
 public class CombatStats : ScriptableObject {
     public float health, armor, magicResist, attack, magicAttack;
 
+    /// <summary>
+    /// Creates a new CombatStats instance and clones the values from this one.
+    /// </summary>
+    /// <returns>The cloned CombatStats instance</returns>
     public CombatStats CloneStats() {
         CombatStats returnValue = (CombatStats) CreateInstance(typeof(CombatStats));
         returnValue.health = health;

@@ -35,11 +35,18 @@ public class CharacterBase : MonoBehaviour {
         hasArrived = true;
     }
 
+    /// <summary>
+    /// Queues a new destination for the character to go to 
+    /// </summary>
+    /// <param name="destination">Transform where the character has to reach</param>
     public void GoToDestination(Transform destination) {
         hasArrived = false;
         navMeshAgent.SetDestination(destination.position);
     }
 
+    /// <summary>
+    /// Checks if the character arrived to its destination but LOL ITS WANKY ATM MATE 
+    /// </summary>
     private void CheckArrival() {
         if (interactionRange < navMeshAgent.remainingDistance || hasArrived) 
             return;
@@ -52,6 +59,9 @@ public class CharacterBase : MonoBehaviour {
         CheckArrival();
     }
 
+    /// <summary>
+    /// Displays the stop radius of the character
+    /// </summary>
     private void OnDrawGizmosSelected() {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, interactionRange);

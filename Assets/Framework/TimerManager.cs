@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// <para>TIME LORD</para>
+/// <para>Keeps track of all timers and calls their callback when they're over</para>
+/// </summary>
 public class TimerManager : MonoBehaviour {
     public static TimerManager instance;
     public List<Timer> timers;
