@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9c05ae3827144548b7ffb4f5527786e, type: 3}
+  m_Name: iron_sword
+  m_EditorClassIdentifier: 
+  requiredItems:
+  - item: {fileID: 11400000, guid: 911d1f90de733c54f93a7a349461aa17, type: 2}
+    count: 1
+  - item: {fileID: 11400000, guid: 0e51a71c47f158a49ac9881ff38de87a, type: 2}
+    count: 1
+  result: {fileID: 11400000, guid: 83a11e3be4d708c4da7fd374f8448aa4, type: 2}
