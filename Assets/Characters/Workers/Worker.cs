@@ -61,7 +61,6 @@ public class Worker : CharacterBase {
 
     private void AddXP(uint amount) {
         currentXP += amount;
-        Debug.Log(workerClass.XPCurve(level + 1));
         if (currentXP >= workerClass.XPCurve(level + 1))
             LevelUp();
     }
