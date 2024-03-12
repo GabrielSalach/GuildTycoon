@@ -38,7 +38,7 @@ public class Inventory : ScriptableObject {
     public ItemSlot RemoveItem(Item item, uint quantity) {
         ItemSlot returnValue = null;
         foreach (ItemSlot slot in itemSlots) {
-            if (slot.item == item == slot.count >= quantity) {
+            if (slot.item == item && slot.count >= quantity) {
                 returnValue = slot;
                 slot.count -= quantity;
             }
