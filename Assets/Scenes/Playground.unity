@@ -7377,9 +7377,10 @@ MonoBehaviour:
   onArrivalAtDestination:
     m_PersistentCalls:
       m_Calls: []
+  workerClass: {fileID: 11400000, guid: e9873c6ec148ac44e927469fc436f6ee, type: 2}
+  level: 1
   workstation: {fileID: 444374041}
-  knownRecipes:
-  - {fileID: 11400000, guid: b55f07a4455fbb14988c51e01498a67d, type: 2}
+  knownRecipes: []
   chest: {fileID: 354345895}
   craftingSpeed: 5
 --- !u!195 &2087064879

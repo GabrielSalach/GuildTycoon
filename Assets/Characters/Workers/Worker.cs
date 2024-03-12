@@ -49,6 +49,7 @@ public class Worker : CharacterBase {
     /// </summary>
     /// <param name="selectedRecipe">Recipe to craft</param>
     private void Craft(Recipe selectedRecipe) {
+        onArrivalAtDestination.RemoveAllListeners();
         Timer timer = new Timer(craftingSpeed, () => {
             //TODO: Replace by toast notification
             Debug.Log("Finished Crafting " + selectedRecipe.result.itemName);
