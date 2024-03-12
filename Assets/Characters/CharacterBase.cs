@@ -14,6 +14,7 @@ public class CharacterBase : MonoBehaviour {
     
     
     [SerializeField] private string characterName;
+    public string CharacterName => characterName;
     // Combat Stats
     [SerializeField] private CombatStats baseCombatStats;
     private CombatStats currentCombatStats;

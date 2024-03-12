@@ -63,6 +63,7 @@ public class Window : MonoBehaviour {
     /// Opens the window
     /// </summary>
     public void OpenWindow() {
+        Debug.Log("Opened");
         if(isOpened && !isLocked)
             return;
         isOpened = true;

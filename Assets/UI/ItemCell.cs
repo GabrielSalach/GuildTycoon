@@ -38,7 +38,7 @@ public class ItemCell : MonoBehaviour {
     /// </summary>
     /// <param name="newItemSlot">Items to be displayed in form of ItemSlot instance</param>
     public void SetItem(ItemSlot newItemSlot) {
-        SetItem(newItemSlot.item, newItemSlot.count)
+        SetItem(newItemSlot.item, newItemSlot.count);
     }
 
     // Getters

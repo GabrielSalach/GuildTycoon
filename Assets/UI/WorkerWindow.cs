@@ -15,6 +15,7 @@ public class WorkerWindow : Window {
    /// <param name="newWorker">Worker to be loaded</param>
    public void SetWorker(Worker newWorker) {
       worker = newWorker;
+      SetTitle(worker.CharacterName);
       foreach (Recipe recipe in worker.KnownRecipes) {
          // Instantiates a RecipeUI and loads the recipe
          RecipeUI ui = Instantiate(recipeUI, recipeRoot).GetComponent<RecipeUI>();

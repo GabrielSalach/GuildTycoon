@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7335,9 +7335,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   workstation: {fileID: 444374041}
-  knownRecipes: []
-  chest: {fileID: 0}
-  craftingSpeed: 0
+  knownRecipes:
+  - {fileID: 11400000, guid: b55f07a4455fbb14988c51e01498a67d, type: 2}
+  chest: {fileID: 354345895}
+  craftingSpeed: 5
 --- !u!195 &2087064879
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9956,7 +9957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e4423ef8f686a5479b09f36497cded1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openedTarget: {fileID: 2040785855}
+  openedTarget: {fileID: 2085698104}
   closedTarget: {fileID: 2040785855}
   animationCurve:
     serializedVersion: 2
