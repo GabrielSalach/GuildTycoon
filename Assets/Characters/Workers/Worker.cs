@@ -1,10 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Worker : CharacterBase {
+    // Worker class and XP
     [SerializeField] private WorkerClass workerClass;
     [SerializeField] private uint level;
     [SerializeField] private uint currentXP;
@@ -18,6 +18,8 @@ public class Worker : CharacterBase {
     [SerializeField] private Chest chest;
     // Amount of seconds it takes to craft a single item
     [SerializeField] private float craftingSpeed;
+
+    [SerializeField] private GameObject progressBarPrefab;
 
     protected override void Awake() {
         base.Awake();
@@ -57,6 +59,9 @@ public class Worker : CharacterBase {
             chest.Inventory.AddItem(selectedRecipe.result, 1);
             AddXP(selectedRecipe.rewardXP);
         });
+        Transform canvas = Transform.FindObjectOfType<Canvas>().transform;
+        GameObject spawnedProgressBar = Instantiate(progressBarPrefab, canvas);
+        spawnedProgressBar.GetComponent<ProgressBar>().SetProgressBar(timer, interactable);
     }
 
     private void AddXP(uint amount) {
