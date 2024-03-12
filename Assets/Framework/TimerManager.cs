@@ -20,7 +20,6 @@ public class TimerManager : MonoBehaviour {
     }
 
     private void Update() {
-        Debug.Log("Timer count : " + timers.Count);
         if (timers.Count == 0)
             return;
         for (int i = timers.Count - 1; i >= 0; i--) {
