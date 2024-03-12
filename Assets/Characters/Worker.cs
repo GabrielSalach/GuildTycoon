@@ -17,7 +17,6 @@ public class Worker : CharacterBase {
 
     protected override void Awake() {
         base.Awake();
-        //TODO: Doesn't work LOL
         interactable.onClick.AddListener(() => {
             WindowsManager.instance.WorkerWindow.SetWorker(this);
             WindowsManager.instance.WorkerWindow.OpenWindow();
@@ -37,7 +36,7 @@ public class Worker : CharacterBase {
             }
         }
 
-        GoToDestination(workstation);
+        GoToDestination(workstation.position);
         onArrivalAtDestination.AddListener(() => {Craft(selectedRecipe);});
     }
 
@@ -47,6 +46,7 @@ public class Worker : CharacterBase {
     /// <param name="selectedRecipe">Recipe to craft</param>
     private void Craft(Recipe selectedRecipe) {
         Timer timer = new Timer(craftingSpeed, () => {
+            //TODO: Replace by toast notification
             Debug.Log("Finished Crafting " + selectedRecipe.result.itemName);
             chest.Inventory.AddItem(selectedRecipe.result, 1);
         });

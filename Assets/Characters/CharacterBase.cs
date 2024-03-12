@@ -4,12 +4,10 @@ using UnityEngine.AI;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(Interactable))]
-[RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(NavMeshAgent))]
 public class CharacterBase : MonoBehaviour {
     //Components
     protected Interactable interactable;
-    private Rigidbody rigidBody;
     private NavMeshAgent navMeshAgent;
     
     
@@ -29,8 +27,6 @@ public class CharacterBase : MonoBehaviour {
         interactable = GetComponent<Interactable>();
         currentCombatStats = baseCombatStats.CloneStats();
         
-        rigidBody = GetComponent<Rigidbody>();
-        rigidBody.constraints = RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationX;
 
         navMeshAgent = GetComponent<NavMeshAgent>();
         hasArrived = true;
@@ -39,10 +35,11 @@ public class CharacterBase : MonoBehaviour {
     /// <summary>
     /// Queues a new destination for the character to go to 
     /// </summary>
-    /// <param name="destination">Transform where the character has to reach</param>
-    public void GoToDestination(Transform destination) {
+    /// <param name="destination">Position the character has to reach</param>
+    protected void GoToDestination(Vector3 destination) {
+        
         hasArrived = false;
-        navMeshAgent.SetDestination(destination.position);
+        navMeshAgent.SetDestination(destination);
     }
 
     /// <summary>

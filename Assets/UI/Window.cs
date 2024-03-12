@@ -63,7 +63,6 @@ public class Window : MonoBehaviour {
     /// Opens the window
     /// </summary>
     public void OpenWindow() {
-        Debug.Log("Opened");
         if(isOpened && !isLocked)
             return;
         isOpened = true;
@@ -81,7 +80,7 @@ public class Window : MonoBehaviour {
         isFocused = false;
         Animate(openedTarget.position, closedTarget.position);
     }
-
+    
     /// <summary>
     /// Moves the window using the mouse but it doesn't work yet.
     /// </summary>
