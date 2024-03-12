@@ -7378,7 +7378,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   workerClass: {fileID: 11400000, guid: e9873c6ec148ac44e927469fc436f6ee, type: 2}
-  level: 1
+  level: 0
+  currentXP: 0
   workstation: {fileID: 444374041}
   knownRecipes: []
   chest: {fileID: 354345895}

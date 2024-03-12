@@ -7,6 +7,7 @@ using UnityEngine;
 public class Worker : CharacterBase {
     [SerializeField] private WorkerClass workerClass;
     [SerializeField] private uint level;
+    [SerializeField] private uint currentXP;
 
     // Assigned workstation position
     [SerializeField] private Transform workstation;
@@ -54,10 +55,18 @@ public class Worker : CharacterBase {
             //TODO: Replace by toast notification
             Debug.Log("Finished Crafting " + selectedRecipe.result.itemName);
             chest.Inventory.AddItem(selectedRecipe.result, 1);
+            AddXP(selectedRecipe.rewardXP);
         });
     }
 
-    public void LevelUp() {
+    private void AddXP(uint amount) {
+        currentXP += amount;
+        Debug.Log(workerClass.XPCurve(level + 1));
+        if (currentXP >= workerClass.XPCurve(level + 1))
+            LevelUp();
+    }
+    
+    private void LevelUp() {
         level++;
         UpdateLevel();
     }

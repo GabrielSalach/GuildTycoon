@@ -5,4 +5,5 @@ using UnityEngine;
 public class Recipe : ScriptableObject {
     public List<ItemSlot> requiredItems;
     public Item result;
+    public uint rewardXP;
 }
