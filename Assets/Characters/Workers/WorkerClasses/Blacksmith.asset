@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa50182a74d34704bb56fc7838a41f06, type: 3}
+  m_Name: Blacksmith
+  m_EditorClassIdentifier: 
+  className: Blacksmith
+  recipeLevelList:
+  - recipe: {fileID: 11400000, guid: b55f07a4455fbb14988c51e01498a67d, type: 2}
+    level: 0
+  - recipe: {fileID: 11400000, guid: 766b0fd8c9036814e8e365b7c41c26fa, type: 2}
+    level: 1
