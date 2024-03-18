@@ -7377,7 +7377,6 @@ MonoBehaviour:
   onArrivalAtDestination:
     m_PersistentCalls:
       m_Calls: []
-  sword: {fileID: 11400000, guid: 39888534ed4808b4f81a9329f2e581d5, type: 2}
   workerClass: {fileID: 11400000, guid: e9873c6ec148ac44e927469fc436f6ee, type: 2}
   level: 0
   currentXP: 0
