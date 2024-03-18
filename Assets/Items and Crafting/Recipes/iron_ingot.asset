@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: iron_ingot
   m_EditorClassIdentifier: 
   requiredItems:
-  - item: {fileID: 11400000, guid: 83a11e3be4d708c4da7fd374f8448aa4, type: 2}
+  - item: {fileID: 11400000, guid: 39888534ed4808b4f81a9329f2e581d5, type: 2}
     count: 1
   result: {fileID: 11400000, guid: 911d1f90de733c54f93a7a349461aa17, type: 2}
   rewardXP: 10

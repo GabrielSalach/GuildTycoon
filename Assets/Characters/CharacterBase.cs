@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
@@ -17,12 +18,13 @@ public class CharacterBase : MonoBehaviour {
     [SerializeField] private CombatStats baseCombatStats;
     private CombatStats currentCombatStats;
     
+    private Equipment[] equipment = new Equipment[8];
+    
     // Pathfinding
     [SerializeField] private float interactionRange;
     [HideInInspector] public UnityEvent onArrivalAtDestination;
     private bool hasArrived;
 
-    
     protected virtual void Awake() {
         interactable = GetComponent<Interactable>();
         currentCombatStats = baseCombatStats.CloneStats();
@@ -63,5 +65,10 @@ public class CharacterBase : MonoBehaviour {
     private void OnDrawGizmosSelected() {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, interactionRange);
+    }
+
+    private void EquipItem(Equipment item, int slot) {
+        equipment[slot] = item;
+        baseCombatStats += item.bonusStats;
     }
 }

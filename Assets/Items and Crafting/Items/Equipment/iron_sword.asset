@@ -9,8 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9eb75884f04d634995739d13e02177c, type: 3}
+  m_Script: {fileID: 11500000, guid: b5154a13b390050428b545f5f9b8e5c2, type: 3}
   m_Name: iron_sword
   m_EditorClassIdentifier: 
   itemName: Iron Sword
   itemSprite: {fileID: 21300000, guid: 3c8ea145163713c4da12e3fcf1b19279, type: 3}
+  equipmentType: 0
+  bonusHealth: 0
+  bonusArmor: 0
+  bonusMagicResist: 0
+  bonusAttack: 10
+  bonusMagicAttack: 0
+  bonusStats: {fileID: 0}

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName="ScriptableObjects/CombatStats", fileName = "Combat Stats", order = 0)]
+[System.Serializable]
 public class CombatStats : ScriptableObject {
     public float health, armor, magicResist, attack, magicAttack;
 
@@ -19,5 +20,20 @@ public class CombatStats : ScriptableObject {
         returnValue.magicAttack = magicAttack;
         
         return returnValue;
+    }
+    
+    public static CombatStats operator +(CombatStats a, CombatStats b) {
+        CombatStats newStats = CreateInstance<CombatStats>();
+        newStats.health = a.health + b.health;
+        newStats.armor = a.armor + b.armor;
+        newStats.magicResist = a.magicResist + b.magicResist;
+        newStats.attack = a.attack + b.attack;
+        newStats.magicAttack = a.magicAttack + b.magicAttack;
+        return newStats;
+    }
+
+    public override string ToString() {
+        return "Health : " + health + ", Armor : " + armor + ", Magic Resist : " + magicResist + ", Attack : " + attack +
+               ", Magic Attack : " + magicAttack;
     }
 }
