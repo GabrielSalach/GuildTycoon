@@ -18,6 +18,9 @@ public class CharacterBase : MonoBehaviour {
     // Combat Stats
     protected CombatStats baseCombatStats;
     protected CombatStats currentCombatStats;
+
+    public CombatStats CurrentCombatStats => currentCombatStats;
+
     protected Equipment[] equipment = new Equipment[8];
 
     protected CharacterClass characterClass;

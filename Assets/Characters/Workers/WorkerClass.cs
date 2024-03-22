@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "ScriptableObjects/WorkerClass", fileName = "WorkerClass", order = 0)]
+[CreateAssetMenu(menuName = "ScriptableObjects/Characters/WorkerClass", fileName = "WorkerClass", order = 0)]
 public class WorkerClass : CharacterClass {
     public List<LeveledRecipe> recipeLevelList;
     
