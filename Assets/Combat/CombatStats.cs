@@ -1,34 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-[CreateAssetMenu(menuName="ScriptableObjects/Combat/CombatStats", fileName = "Combat Stats", order = 0)]
 [System.Serializable]
-public class CombatStats : ScriptableObject {
-    public float health, armor, magicResist, attack, magicAttack;
+public class CombatStats {
+    public float health;
+    public float armor;
+    public float magicResist;
+    public float attack;
+    public float magicAttack;
+
+    public CombatStats(float health, float armor, float magicResist, float attack, float magicAttack) {
+        this.health = health;
+        this.armor = armor;
+        this.magicResist = magicResist;
+        this.attack = attack;
+        this.magicAttack = magicAttack;
+    }
 
     /// <summary>
     /// Creates a new CombatStats instance and clones the values from this one.
     /// </summary>
     /// <returns>The cloned CombatStats instance</returns>
     public CombatStats CloneStats() {
-        CombatStats returnValue = (CombatStats) CreateInstance(typeof(CombatStats));
-        returnValue.health = health;
-        returnValue.armor = armor;
-        returnValue.magicResist = magicResist;
-        returnValue.attack = attack;
-        returnValue.magicAttack = magicAttack;
-        
+        CombatStats returnValue = new(health,armor, magicResist,attack, magicAttack);
         return returnValue;
     }
     
     public static CombatStats operator +(CombatStats a, CombatStats b) {
-        CombatStats newStats = CreateInstance<CombatStats>();
-        newStats.health = a.health + b.health;
-        newStats.armor = a.armor + b.armor;
-        newStats.magicResist = a.magicResist + b.magicResist;
-        newStats.attack = a.attack + b.attack;
-        newStats.magicAttack = a.magicAttack + b.magicAttack;
+        CombatStats newStats = new(a.health + b.health, a.armor + b.armor, a.magicResist + b.magicResist, a.attack + b.attack, a.magicAttack + b.magicAttack);
         return newStats;
     }
 

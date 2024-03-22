@@ -7312,7 +7312,7 @@ GameObject:
   - component: {fileID: 2087064882}
   - component: {fileID: 2087064881}
   - component: {fileID: 2087064879}
-  - component: {fileID: 2087064878}
+  - component: {fileID: 2087064883}
   m_Layer: 0
   m_Name: Patrick
   m_TagString: Untagged
@@ -7359,33 +7359,6 @@ Transform:
   - {fileID: 1319902467}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2087064878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2087064870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9237a081317143f4d90ab3cc81badd82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterName: Patrick
-  baseCombatStats: {fileID: 11400000, guid: 7fad75c865097b947afffb63856f981c, type: 2}
-  interactionRange: 1.1
-  onArrivalAtDestination:
-    m_PersistentCalls:
-      m_Calls: []
-  workerClass: {fileID: 11400000, guid: e9873c6ec148ac44e927469fc436f6ee, type: 2}
-  level: 0
-  currentXP: 0
-  workstation: {fileID: 444374041}
-  knownRecipes: []
-  chest: {fileID: 354345895}
-  craftingSpeed: 5
-  progressBarPrefab: {fileID: 7257600409315280122, guid: f1ee5b14e6a214c4fa08a54ad16b12b4,
-    type: 3}
 --- !u!195 &2087064879
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7453,6 +7426,32 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &2087064883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087064870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9237a081317143f4d90ab3cc81badd82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: Patrick
+  interactionRange: 1.1
+  onArrivalAtDestination:
+    m_PersistentCalls:
+      m_Calls: []
+  craftingSpeed: 5
+  workerClass: {fileID: 11400000, guid: e9873c6ec148ac44e927469fc436f6ee, type: 2}
+  level: 0
+  currentXP: 0
+  knownRecipes: []
+  workstation: {fileID: 444374041}
+  chest: {fileID: 354345895}
+  progressBarPrefab: {fileID: 7257600409315280122, guid: f1ee5b14e6a214c4fa08a54ad16b12b4,
+    type: 3}
 --- !u!1001 &2115165652
 PrefabInstance:
   m_ObjectHideFlags: 0

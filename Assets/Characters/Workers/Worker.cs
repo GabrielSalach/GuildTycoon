@@ -4,24 +4,28 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Worker : CharacterBase {
+    [Header("Worker Attributes")]
     // Worker class and XP
-    [SerializeField] private WorkerClass workerClass;
+    [SerializeField]
+    private WorkerClass workerClass;
+    // Amount of seconds it takes to craft a single item
+    [SerializeField] private float craftingSpeed;
+
     [SerializeField] private uint level;
     [SerializeField] private uint currentXP;
 
-    // Assigned workstation position
-    [SerializeField] private Transform workstation;
     // Known recipes
     [SerializeField] private List<Recipe> knownRecipes;
     public List<Recipe> KnownRecipes => knownRecipes;
+    // Assigned workstation position
+    [SerializeField] private Transform workstation;
     // Assigned Chest
     [SerializeField] private Chest chest;
-    // Amount of seconds it takes to craft a single item
-    [SerializeField] private float craftingSpeed;
 
     [SerializeField] private GameObject progressBarPrefab;
 
     protected override void Awake() {
+        characterClass = (CharacterClass)workerClass;
         base.Awake();
         interactable.onClick.AddListener(() => {
             WindowsManager.instance.WorkerWindow.SetWorker(this);

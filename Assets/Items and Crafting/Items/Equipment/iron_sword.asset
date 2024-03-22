@@ -15,9 +15,9 @@ MonoBehaviour:
   itemName: Iron Sword
   itemSprite: {fileID: 21300000, guid: 3c8ea145163713c4da12e3fcf1b19279, type: 3}
   equipmentType: 0
-  bonusHealth: 0
-  bonusArmor: 0
-  bonusMagicResist: 0
-  bonusAttack: 10
-  bonusMagicAttack: 0
-  bonusStats: {fileID: 0}
+  bonusStats:
+    health: 0
+    armor: 0
+    magicResist: 0
+    attack: 10
+    magicAttack: 0

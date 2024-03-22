@@ -12,13 +12,15 @@ public class CharacterBase : MonoBehaviour {
     private NavMeshAgent navMeshAgent;
     
     
+    [Header("Character Base Attributes")]
     [SerializeField] private string characterName;
     public string CharacterName => characterName;
     // Combat Stats
-    [SerializeField] private CombatStats baseCombatStats;
-    private CombatStats currentCombatStats;
-    
-    private Equipment[] equipment = new Equipment[8];
+    protected CombatStats baseCombatStats;
+    protected CombatStats currentCombatStats;
+    protected Equipment[] equipment = new Equipment[8];
+
+    protected CharacterClass characterClass;
     
     // Pathfinding
     [SerializeField] private float interactionRange;
@@ -27,6 +29,7 @@ public class CharacterBase : MonoBehaviour {
 
     protected virtual void Awake() {
         interactable = GetComponent<Interactable>();
+        baseCombatStats = characterClass.baseStats.CloneStats();
         currentCombatStats = baseCombatStats.CloneStats();
         
 

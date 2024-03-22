@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: Blacksmith
   m_EditorClassIdentifier: 
   className: Blacksmith
+  baseStats:
+    health: 100
+    armor: 0
+    magicResist: 0
+    attack: 0
+    magicAttack: 0
   recipeLevelList:
   - recipe: {fileID: 11400000, guid: b55f07a4455fbb14988c51e01498a67d, type: 2}
     level: 0

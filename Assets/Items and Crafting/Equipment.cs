@@ -12,17 +12,5 @@ public class Equipment : Item
     }
 
     public EquipmentType equipmentType;
-    public float bonusHealth, bonusArmor, bonusMagicResist, bonusAttack, bonusMagicAttack;
-    [HideInInspector]
     public CombatStats bonusStats;
-
-    [ExecuteInEditMode]
-    private void OnValidate() {
-        bonusStats = CreateInstance<CombatStats>();
-        bonusStats.health = bonusHealth;
-        bonusStats.armor = bonusArmor;
-        bonusStats.magicResist = bonusMagicResist;
-        bonusStats.attack = bonusAttack;
-        bonusStats.magicAttack = bonusMagicAttack;
-    }
 }
